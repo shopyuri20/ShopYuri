@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - ShopYuri</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/YuriLogo.jpg">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .message-page {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo.jpg" alt="ShopYuri" onerror="this.style.display='none'">
+            <span>ShopYuri</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#catalog">Catalog</a></li>
+            <li><a href="commissions.html">Commissions</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+        <button class="cart-btn" aria-label="Open cart">
+            <span class="cart-icon">Cart</span>
+            <span class="cart-count">0</span>
+        </button>
+    </nav>
+
+    <div class="flowers" style="position:fixed;inset:0;pointer-events:none;z-index:0;">
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+    </div>
+
+    <div class="message-page">
+        <h1>Thank You!</h1>
+        <p>Your order is confirmed. We will get your order packed and shipped with love!</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+            <a href="index.html" class="btn-primary">Continue Shopping</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-brand">ShopYuri</div>
+        <div class="footer-links">
+            <a href="legal.html">Legal &amp; Returns</a>
+        </div>
+        <div class="footer-copy">2025 ShopYuri. All rights reserved.</div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cart = [];
+            saveCart();
+            updateCartUI();
+            const r = document.getElementById("review-link-success");
+            if (r && typeof GOOGLE_REVIEW_LINK !== "undefined") r.href = GOOGLE_REVIEW_LINK;
+        });
+    </script>
+</body>
+</html>

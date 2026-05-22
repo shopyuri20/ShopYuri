@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links - ShopYuri</title>
+    <meta name="description" content="Find ShopYuri everywhere - Instagram, TikTok, Facebook and more.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/YuriLogo.jpg">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo.jpg" alt="ShopYuri" onerror="this.style.display='none'">
+            <span>ShopYuri</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#catalog">Catalog</a></li>
+            <li><a href="commissions.html">Commissions</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+        <button class="cart-btn" aria-label="Open cart">
+            <span class="cart-icon">Cart</span>
+            <span class="cart-count">0</span>
+        </button>
+    </nav>
+
+    <main>
+        <div class="page-hero">
+            <h1>Links</h1>
+            <p>Find ShopYuri everywhere</p>
+        </div>
+
+        <section>
+            <div class="links-grid">
+                <a href="https://www.instagram.com/shopyuri.20/" target="_blank" rel="noopener" class="link-card">
+                    <div class="link-info">
+                        <h3>Instagram</h3>
+                        <p>@shopyuri. - products and updates</p>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/shopyuri.20backup/" target="_blank" rel="noopener" class="link-card">
+                    <div class="link-info">
+                        <h3>Instagram (Backup)</h3>
+                        <p>@shopyuri.backup - backup account</p>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/yuris.paintings/" target="_blank" rel="noopener" class="link-card">
+                    <div class="link-info">
+                        <h3>Art Instagram</h3>
+                        <p>@yuris.paintings - original art and commissions</p>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@shopyuri.20" target="_blank" rel="noopener" class="link-card">
+                    <div class="link-info">
+                        <h3>TikTok</h3>
+                        <p>@shopyuri - videos and behind the scenes</p>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100084242085645" target="_blank" rel="noopener" class="link-card">
+                    <div class="link-info">
+                        <h3>Facebook</h3>
+                        <p>ShopYuri on Facebook</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">ShopYuri</div>
+        <div class="footer-links">
+            <a href="legal.html">Legal & Returns</a>
+        </div>
+        <div class="footer-copy">© 2025 ShopYuri. All rights reserved.</div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="cart-close" id="cart-close">X</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <div class="cart-checkout-btns">
+                <button class="btn-paypal" id="btn-paypal" disabled>Pay with PayPal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

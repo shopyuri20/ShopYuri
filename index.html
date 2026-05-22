@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopYuri - Sanrio and Art Goods</title>
+    <meta name="description" content="hello kitty, kuromi, my melody, pompom, jewlery, custom creations, comms, Cute Sanrio items, original art, 3D prints and more. ShopYuri - your kawaii shop.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/YuriLogo.jpg">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo.jpg" alt="ShopYuri" onerror="this.style.display='none'">
+            <span>ShopYuri</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#catalog">Catalog</a></li>
+            <li><a href="commissions.html">Commissions</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+        <button class="cart-btn" aria-label="Open cart">
+            <span class="cart-icon">Cart</span>
+            <span class="cart-count">0</span>
+        </button>
+    </nav>
+
+    <div class="hero">
+        <h1 class="hero-title">ShopYuri</h1>
+        <p class="hero-subtitle">Sanrio goods and original creations</p>
+        <img class="hero-image" src="assets/images/hero-avatar.png" alt="ShopYuri" onerror="this.style.display='none'">
+    </div>
+
+    <section>
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">Find something you will love</p>
+        <div class="categories">
+            <a href="index.html#catalog" class="category-card">
+                <img src="assets/images/HelloKitty3DChain.png" class="category-img" alt="Sanrio Items">
+                <div class="category-info">
+                    <h3>Sanrio Items</h3>
+                    <p>Plushies, keychains and more</p>
+                </div>
+            </a>
+            <a href="commissions.html" class="category-card">
+                <img src="assets/images/RimuruPainting.png" class="category-img" alt="Art and Commissions">
+                <div class="category-info">
+                    <h3>Art and Commissions</h3>
+                    <p>Original art, prints and custom orders</p>
+                </div>
+            </a>
+            <a href="commissions.html#3dprints" class="category-card">
+                <img src="assets/images/Dragon3d.png" class="category-img" alt="3D Prints">
+                <div class="category-info">
+                    <h3>3D Prints</h3>
+                    <p>Custom 3D printed pieces</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <h2 class="section-title">Catalog</h2>
+        <p class="section-subtitle">All items - ready to ship</p>
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <footer>
+        <div class="footer-brand">ShopYuri</div>
+        <div class="footer-links">
+            <a href="legal.html">Legal & Returns</a>
+        </div>
+        <div class="footer-copy">© 2025 ShopYuri. All rights reserved.</div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="cart-close" id="cart-close">X</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <div class="cart-checkout-btns">
+                <button class="btn-paypal" id="btn-paypal" disabled>Pay with PayPal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            renderProducts("product-grid");
+            const reviewLink = document.getElementById("review-link");
+            if (reviewLink && typeof GOOGLE_REVIEW_LINK !== "undefined") {
+                reviewLink.href = GOOGLE_REVIEW_LINK;
+            }
+        });
+    </script>
+</body>
+</html>
