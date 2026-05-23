@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found � ShopYuri</title>
+    <title>Page Not Found ShopYuri</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .message-page {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
 
-    <nav>
+    <nav style="min-height: 68.97px;">
         <a href="index.html" class="nav-logo">
             <img src="assets/images/logo.jpg" alt="ShopYuri" onerror="this.style.display='none'">
             <span>ShopYuri</span>
@@ -18,10 +29,7 @@
             <li><a href="commissions.html">Commissions</a></li>
             <li><a href="links.html">Links</a></li>
         </ul>
-        <button class="cart-btn" aria-label="Open cart">
-
-            <span class="cart-count">0</span>
-        </button>
+        <div style="width: var(--cart-btn-width, 48px);"></div>
     </nav>
 
     <div class="flowers" style="position:fixed;inset:0;pointer-events:none;z-index:0;">
@@ -39,7 +47,7 @@
         <div class="message-icon"></div>
         <h1>Lost in the flowers?</h1>
         <p>
-            This page doesn't exist � but the shop does!
+            This page doesn't exist but the shop does!
         </p>
         <a href="index.html" class="btn-primary">Back to Shop </a>
     </div>
@@ -47,10 +55,9 @@
     <footer>
         <div class="footer-brand">ShopYuri</div>
         <div class="footer-links">
-            <a href="legal.html">Terms & Privacy</a>
-            <a href="returns.html">Returns</a>
+            <a href="legal.html">Legal &amp; Returns</a>
         </div>
-        <div class="footer-copy">� 2025 ShopYuri. All rights reserved.</div>
+        <div class="footer-copy">© 2026 ShopYuri. All rights reserved.</div>
     </footer>
 
     <script src="js/products.js"></script>
