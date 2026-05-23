@@ -1009,3 +1009,8 @@ footer {
     min-width: 15px;
     text-align: center;
 }
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+}
