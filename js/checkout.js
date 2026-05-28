@@ -1,11 +1,11 @@
 function estimateShipping(totalWeightOz) {
     const packed = totalWeightOz + 2;
-    if (packed <= 4) return 4.50;
-    if (packed <= 8) return 5.50;
-    if (packed <= 16) return 6.99;
-    if (packed <= 32) return 8.49;
-    if (packed <= 48) return 9.99;
-    return 11.99;
+    if (packed <= 4) return 5.99;
+    if (packed <= 8) return 7.49;
+    if (packed <= 16) return 9.49;
+    if (packed <= 32) return 11.49;
+    if (packed <= 48) return 13.49;
+    return 15.99;
 }
 
 function getCartWeight() {
@@ -69,6 +69,13 @@ function initPayPalButton() {
                     user_action: "PAY_NOW",
                 }
             });
+        },
+
+        onShippingAddressChange: function (data, actions) {
+            if (data.shipping_address && data.shipping_address.country_code !== "US") {
+                return actions.reject();
+            }
+            return actions.resolve();
         },
 
         onApprove: function (data, actions) {
